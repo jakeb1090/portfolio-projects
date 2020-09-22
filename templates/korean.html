@@ -1,0 +1,35 @@
+{% extends "template.html" %}
+
+<title>Poster App</title>
+<body>
+
+    {% block main %}
+        
+    <div class="ui one column stackable center aligned page grid">
+        <div class="column twelve wide">   
+    <!-- <div class='ui container'> -->
+        <br>
+        <br>
+        <br>
+        <br>            
+        <form action='/korean' method='post'>
+            <div class="ui huge form">
+                <input placeholder="K-Drama Title" name="title" type="text">
+            </div>
+        </form>          
+        <br>
+        <br>
+        <br>
+        <img class="visible content" src="{{ image }}">
+        {{ message }}
+        <br>
+        <br>
+            {{ num }}
+        </div>
+    </div>
+
+    {% endblock %}
+    </body>
+   
+
+</body>

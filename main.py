@@ -6,8 +6,12 @@ import requests
 
 app = Flask(__name__)
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/', methods=['GET'])
 def home():
+    return render_template("home.html")
+
+@app.route('/photo', methods=['GET', 'POST'])
+def photo():
     if request.method == 'GET':
         message = 'Please enter a TV title'
         return render_template("photo.html", message=message)
@@ -39,11 +43,7 @@ def kr():
         return render_template("korean.html", image=poster_url)
         
         
-        
-        
-        
-        
-           
+                
         
 if __name__ == "__main__":
     app.run()

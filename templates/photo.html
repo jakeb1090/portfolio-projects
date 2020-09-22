@@ -1,6 +1,6 @@
 {% extends "template.html" %}
 
-<title>Poster App</title>
+<title>TMDB data lookup</title>
 <body>
 
     {% block main %}
@@ -11,7 +11,21 @@
         <br>
         <br>
         <br>
-        <br>            
+        <br>
+<div class="pusher">
+    <div class="ui inverted vertical masthead center aligned segment">
+
+     <div class="ui container">
+        <div class="ui large secondary inverted pointing menu">
+            <a class="toc item">
+            <i class="sidebar icon"></i>
+            </a>
+            <a class="item" href="home.html">Home</a>
+            <a class="item" href="photo">English</a>
+            <a class="item" href="korean">Korean</a>
+        
+        </div>
+    </div>            
         <form action='/' method='post'>
             <div class="ui huge form">
                 <input placeholder="Enter TV Title" name="title" type="text">

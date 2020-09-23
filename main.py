@@ -6,14 +6,10 @@ import requests
 
 app = Flask(__name__)
 
-@app.route('/', methods=['GET'])
-def home():
-    return render_template("home.html")
-
-@app.route('/photo', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def photo():
     if request.method == 'GET':
-        message = 'Please enter a TV title'
+        message = 'Find a TV show title poster'
         return render_template("photo.html", message=message)
     else:
         title = request.form['title']
@@ -29,7 +25,7 @@ def photo():
 @app.route('/korean', methods=['GET', 'POST'])
 def kr():
     if request.method == 'GET':
-        message = 'Please enter a KOREAN title'
+        message = 'Find a K-drama title poster'
         return render_template("korean.html", message=message)
     else:
         title = request.form['title']

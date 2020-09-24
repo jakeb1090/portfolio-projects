@@ -13,7 +13,7 @@ def home():
 @app.route('/photo', methods=['GET', 'POST'])
 def photo():
     if request.method == 'GET':
-        message = 'Please enter a TV title'
+        message = 'Find a TV show title poster'
         return render_template("photo.html", message=message)
     else:
         title = request.form['title']
@@ -29,7 +29,7 @@ def photo():
 @app.route('/korean', methods=['GET', 'POST'])
 def kr():
     if request.method == 'GET':
-        message = 'Please enter a KOREAN title'
+        message = 'Find a K-drama title poster'
         return render_template("korean.html", message=message)
     else:
         title = request.form['title']
@@ -41,9 +41,12 @@ def kr():
             message = 'No matching TV title'
             return render_template("korean.html", message=message)
         return render_template("korean.html", image=poster_url)
+    
+@app.route('/loops', methods=['GET'])   
+def loops():
+    return render_template("loops.html")
         
         
-                
-        
+
 if __name__ == "__main__":
     app.run()

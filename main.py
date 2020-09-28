@@ -46,6 +46,10 @@ def kr():
 def loops():
     return render_template("loops.html")
         
+@app.route('/projects', methods=['GET'])   
+def cover():
+    return render_template("starter.html")
+        
         
 
 if __name__ == "__main__":

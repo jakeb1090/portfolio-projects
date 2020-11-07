@@ -1,1 +1,1 @@
-web: gunicorn --bind 0.0.0.0:$PORT movieaapp:app
+web: gunicorn --bind 0.0.0.0:$PORT movieapp:app

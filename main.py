@@ -6,7 +6,7 @@ import requests
 import scraper
 # from werkzeug import secure_filename
 
-moviemapp = Flask(__name__)
+movieapp = Flask(__name__)
 
 # app.config['UPLOAD_FOLDER']
 # app.config['MAX_CONTENT_PATH']

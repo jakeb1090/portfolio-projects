@@ -79,7 +79,6 @@ def indeed_ca():
 #       f.save(secure_filename(f.filename))
 #       return 'file uploaded successfully'
 
-        
-        
 
-if __name__ == "__main__"
+if __name__ == "__main__":
+    app.run()

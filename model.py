@@ -2,7 +2,6 @@ import requests
 from flask import request
 from urllib.parse import urlencode
 import urllib.parse
-import num_word
 
 
 # api_version = '3'

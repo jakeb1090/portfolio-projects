@@ -10,6 +10,8 @@ options = webdriver.ChromeOptions()
 options.add_argument('--headless')
 driver = webdriver.Chrome("./chromedriver", options=options)
 
+os.chmod('/path/to/chromedriver', 0755) # e.g. os.chmod('/Users/user/Documents/my_project/chromedriver', 0755)
+
 
 def getPageList(query, location, salary, days_ago):
     page_list = []

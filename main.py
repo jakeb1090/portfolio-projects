@@ -55,7 +55,7 @@ def loops():
 def cover():
     return render_template("projects.html")
 
-@app.route('/indeed_ca', methods=['GET', 'POST'])   
+@app.route('/indeed', methods=['GET', 'POST'])   
 def indeed_ca():
     if request.method == 'POST':
         j_search = request.form['job_search']
@@ -68,9 +68,9 @@ def indeed_ca():
             results_num = 0
         else:
             results_num = len(all_data)
-        return render_template("indeed_ca.html", all_data=all_data, results_num=results_num)
+        return render_template("indeed.html", all_data=all_data, results_num=results_num)
     else:
-        return render_template("indeed_ca.html")
+        return render_template("indeed.html")
 
 # @app.route('/uploader', methods = ['GET', 'POST'])
 # def upload_file():

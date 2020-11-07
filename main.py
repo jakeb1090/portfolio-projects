@@ -80,5 +80,5 @@ def indeed_ca():
 #       return 'file uploaded successfully'
 
 
-if __name__ == "__main__":
-    app.run()
+# if __name__ == "__main__":
+#     app.run()

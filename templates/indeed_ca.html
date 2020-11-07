@@ -1,0 +1,154 @@
+{% extends "template.html" %}
+
+{% block main %}
+<br>
+<br>
+<br>
+<br>
+<div class="ui container">
+
+    <form action="/indeed_ca" method='post'>
+    <div class="ui input focus">
+        <input type="text" name="job_search" placeholder="job_search query">
+    </div>
+    <div class="ui input focus">
+        <input type="text" name="location" placeholder="location eg, 'Alberta'">
+    </div>
+    <div class="ui input focus">
+        <input type="text" name="salary" placeholder="2-digit only, ($50k->50)">
+    </div>
+    <div class="ui input focus">
+        <input type="text" name="days_ago" placeholder="days_ago">
+    </div>
+    <button type="submit" class="ui button">Submit</button>
+    </form>
+
+<br>
+<div class="ui list">
+     <a class="item">
+      <i class="right triangle icon"></i>
+      <div class="content">
+        <div class="header">Notes:</div>
+        <div class="description"><b>{{ results_num }}</b>Results returned </div>
+        <div class="description">Results are full-time/permanent</div>
+        <div class="description">Returns 200 pages of search results</div>
+        <div class="description">Hey Mae</div>
+      </div>
+    </a>
+  </div>
+<!-------------------------------->
+<div class="ui raised very padded text container segment">
+  <div class="ui mini form">
+    <h2 class="ui header">Apply for all jobs at once</h2>
+      <b>required to automate indeed applications:</b>
+    <div class="two fields">
+      <div class="field">
+        <label></label>
+        <input placeholder="Name" type="text">
+      </div>
+      <br>
+      <div class="field">
+        <label></label>
+        <input placeholder="Email" type="text">
+      </div>
+    </div>
+    <!-- <div class="ui submit button">Submit</div> -->
+  </div>
+
+
+<form action = "/uploader" method = "POST" enctype = "multipart/form-data">
+  <input type = "file" name = "file" />
+  <input type = "ui submit button"/>
+  <br>
+  upload Resume
+</form>   
+</div>
+<!-------------------------------->
+
+ 
+
+<br>
+<br>
+<table class="ui celled table">
+    <thead>
+    <tr>
+        <th>select</th>
+        <th>days old</th>
+        <th>title</th>
+        <th>company</th>
+        <th>location</th>
+        <th>salary</th>
+        <th>requirements</th>
+        <th>summary</th>
+        <th>remote?</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% for x in all_data %}
+      <tr>
+        <td>
+            <div class="ui checkbox">
+                <input type="checkbox" name="example">
+                <label>select to apply</label>
+              </div>
+        </td>  
+        <td>{{ x.date }}</td>
+        <td><a href={{x.link}}>{{ x.title }}</a></td>
+        <td>{{ x.company }} </td>
+        <td>{{ x.location }} </td>
+        <td>{{ x.salary }} </td>
+        <td>{{ x.requirements }} </td>
+        <td>{{ x.summary }} </td>
+        <td>{{ x.remote }} </td>
+          
+      </tr>
+        {%  endfor %}
+    </tbody>
+  </table>
+
+
+<!---
+  https://ca.indeed.com/jobs?as_and=marketing
+  &as_phr
+  =&as_any=
+  &as_not=
+  &as_ttl=
+  &as_cmp=
+  &jt=all
+  &st=
+  &salary=%2439%2C000
+  &radius=25&l=alberta
+  &fromage=last
+  &limit=10&sort=
+  &psf=advsrch
+  &from=advancedsearch
+
+
+
+
+  https://ca.indeed.com/jobs?as_and=marketing
+  &as_phr=
+  &as_any=
+  &as_not=
+  &as_ttl=
+  &as_cmp=
+  &jt=permanent #
+  &st=
+  &salary=%2450%2C000%2B #
+  &radius=25
+  &l=alberta
+  &fromage=3 #
+  &limit=10
+  &sort=
+  &psf=advsrch
+  &from=advancedsearch
+
+-->
+
+
+
+
+
+</div>
+
+{% endblock %}

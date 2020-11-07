@@ -6,7 +6,7 @@ import requests
 import scraper
 # from werkzeug import secure_filename
 
-movieapp = Flask(__name__)
+app = Flask(__name__)
 
 # app.config['UPLOAD_FOLDER']
 # app.config['MAX_CONTENT_PATH']
@@ -81,4 +81,4 @@ def indeed_ca():
 
 
 if __name__ == "__main__":
-    movieapp.run(debug=True)
+    app.run()

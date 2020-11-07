@@ -1,12 +1,9 @@
-import os
-
 from flask import Flask, request, render_template
 import modulefinder
 from model import MovieAPI
 import model
 import requests
 import scraper
-
 # from werkzeug import secure_filename
 
 app = Flask(__name__)

@@ -8,7 +8,7 @@ import os
 
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')
-driver = webdriver.Chrome("./chromedriver", options=options)
+driver = webdriver.Chrome(options=options)
 
 
 def getPageList(query, location, salary, days_ago):

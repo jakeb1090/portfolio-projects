@@ -6,9 +6,17 @@ from selenium import webdriver
 from requests_html import AsyncHTMLSession
 import os
 
+GOOGLE_CHROME_PATH = '/app/.apt/usr/bin/google_chrome'
+CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
+
 options = webdriver.ChromeOptions()
-options.add_argument('--headless')
-driver = webdriver.Chrome("./chromedriver", options=options)
+# options.add_argument('--headless')
+# driver = webdriver.Chrome("./chromedriver", options=options)
+
+chrome_options.add_argument('--disable-gpu')
+chrome_options.add_argument('--no-sandbox')
+chrome_options.binary_location = GOOGLE_CHROME_PATH
+driver = webdriver.Chrome(execution_path=CHROMEDRIVER_PATH, chrome_options=chrome_options)
 
 
 def getPageList(query, location, salary, days_ago):

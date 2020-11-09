@@ -1,7 +1,6 @@
 from flask import Flask, request, render_template
-import modulefinder
-from model import MovieAPI
-import model
+# import modulefinder
+# import model
 import requests
 import scraper
 # from werkzeug import secure_filename
@@ -13,7 +12,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def home():
-    return render_template("home.html")
+    return render_template("indeed_ca.html")
 
 @app.route('/photo', methods=['GET', 'POST'])
 def photo():

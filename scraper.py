@@ -7,7 +7,7 @@ from requests_html import AsyncHTMLSession
 import os
 
 options = webdriver.ChromeOptions()
-<<<<<<< HEAD
+
 # options.add_argument('--headless')
 # driver = webdriver.Chrome("./chromedriver", options=options)
 

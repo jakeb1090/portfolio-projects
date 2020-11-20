@@ -1,2 +1,1 @@
-web: gunicorn main:app --log-file - --log-level debug
-worker: python main.py
+web: gunicorn --bind 0.0.0.0:$PORT app:app

@@ -3,3 +3,4 @@ selenium
 requests
 requests-html
 pandas
+gunicorn

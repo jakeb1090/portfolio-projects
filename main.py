@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-import modulefinder
+# import modulefinder
 from model import MovieAPI
 import model
 import requests
@@ -8,7 +8,7 @@ import scraper
 
 app = Flask(__name__)
 
-# app.config['UPLOAD_FOLDER']
+# app.config['UPLOAD_FOLDER']pip 
 # app.config['MAX_CONTENT_PATH']
 
 @app.route('/', methods=['GET'])

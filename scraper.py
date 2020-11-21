@@ -132,3 +132,4 @@ def get_loc(x):
         return "xx"
     else:
         return loc.text
+    

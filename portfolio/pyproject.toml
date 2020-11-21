@@ -11,6 +11,8 @@ selenium = "*"
 requests = "*"
 requests-html = "*"
 gunicorn = "*"
+poetry = "^1.1.4"
+
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

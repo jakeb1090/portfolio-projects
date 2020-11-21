@@ -1,0 +1,6 @@
+flask 
+selenium
+pandas
+requests
+requests-html
+gunicorn

@@ -58,11 +58,11 @@ def cover():
 @app.route('/indeed', methods=['GET', 'POST'])   
 def indeed_ca():
     if request.method == 'POST':
-        j_search = request.form['job_search']
+        query = request.form['job_search']
         location = request.form['location']
         days_ago = request.form['days_ago']
         salary = request.form['salary']
-        container_list = scraper.breakIntoContainers(j_search, location, salary, days_ago)
+        container_list = scraper.breakIntoContainers(query, location, salary, days_ago)
         all_data = scraper.scrapeData(container_list)
         if all_data == None:
             results_num = 0
@@ -81,5 +81,4 @@ def indeed_ca():
 
 
 if __name__ == '__main__':
-    # app.run(debug=True, host='0.0.0.0')
     app.run()

@@ -2,6 +2,7 @@ import requests
 from flask import request
 from urllib.parse import urlencode
 import urllib.parse
+from config import _api_key
 
 
 # api_version = '3'
@@ -10,7 +11,7 @@ import urllib.parse
 # endpoint = f"{api_base_url}{endpoint_path}?api_key={api_key}"
 # print(endpoint)
 
-api_key = '117fc9f739845d5f616af35ae5ab3a47'
+api_key = _api_key
 api_version = 3
 base_url = f"https://api.themoviedb.org/{api_version}"
 resource_path = '/tv/airing_today'

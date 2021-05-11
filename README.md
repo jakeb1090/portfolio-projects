@@ -1,5 +1,5 @@
 ### Indeed Application web app
-#### apply for 100+ jobs at once
+#### apply for multiple jobs with one resume upload
 #### Selenium and chromedriver to scrape Indeed results and output to json
 
 ## Movie poster web app
